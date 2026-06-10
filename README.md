@@ -205,7 +205,7 @@ Além disso, ficou evidente a importância da segurança na configuração de gr
 ### Diagrama da Arquitetura
 
 ```markdown
-![Arquitetura](Diagrama de EC2 .drawio)
+![Arquitetura](Diagrama de EC2.png)
 ```
 
 ---
