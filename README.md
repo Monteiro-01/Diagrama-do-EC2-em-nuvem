@@ -9,7 +9,7 @@
 <div align="center">
 
 <img
-    src="./images/diagrama-ec2.png"
+    src="Diagrama de EC2.png"
     alt="Diagrama de Arquitetura AWS EC2"
     width="900"
 />
