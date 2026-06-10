@@ -1,0 +1,142 @@
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#FF9900,#232F3E);
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+h2{
+    color:#FF9900;
+    border-left:5px solid #FF9900;
+    padding-left:15px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.25);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.architecture{
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+}
+
+.code{
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#FF9900;
+    color:white;
+}
+
+table th,
+table td{
+    border:1px solid #334155;
+    padding:12px;
+    text-align:left;
+}
+
+.badges{
+    margin-top:20px;
+}
+
+.badge{
+    display:inline-block;
+    background:white;
+    color:#232F3E;
+    padding:8px 16px;
+    border-radius:20px;
+    margin:5px;
+    font-weight:bold;
+}
+
+ul{
+    padding-left:20px;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #1e293b;
+}
+
+footer h3{
+    color:#FF9900;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}
+```

@@ -1,35 +1,80 @@
-# 🚀 AWS EC2 Lab - Gerenciamento de Instâncias na AWS
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 Lab - Gerenciamento de Instâncias</title>
 
-> Repositório desenvolvido como parte do desafio prático de AWS EC2, com foco na criação, configuração, monitoramento e gerenciamento de instâncias na nuvem utilizando os serviços da AWS.
+    <link rel="stylesheet" href="style.css">
+</head>
 
-[![AWS](https://img.shields.io/badge/AWS-EC2-FF9900?style=for-the-badge&logo=amazonaws)](#aws)
-[![Cloud](https://img.shields.io/badge/Cloud-Computing-4285F4?style=for-the-badge)](#computação-em-nuvem)
-[![GitHub](https://img.shields.io/badge/GitHub-Documentation-181717?style=for-the-badge&logo=github)](#documentação)
-[![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)](#conclusão)
----
+<body>
 
-## 📌 Sobre o Projeto
+<header>
+    <h1>🚀 AWS EC2 Lab</h1>
+    <p>Gerenciamento de Instâncias na AWS</p>
 
-Este laboratório teve como objetivo explorar os principais recursos do serviço **Amazon EC2 (Elastic Compute Cloud)**, permitindo a criação e gerenciamento de servidores virtuais na nuvem.
+    <div class="badges">
+        <span class="badge">AWS EC2</span>
+        <span class="badge">Cloud Computing</span>
+        <span class="badge">GitHub Documentation</span>
+        <span class="badge">Concluído</span>
+    </div>
+</header>
 
-Durante a prática foram abordados conceitos essenciais relacionados à infraestrutura cloud, segurança, monitoramento e administração de instâncias.
+<div class="container">
 
----
+<section>
+    <h2>📌 Sobre o Projeto</h2>
 
-## 🎯 Objetivos
+    <div class="card">
+        <p>
+            Este laboratório teve como objetivo explorar os principais recursos do
+            Amazon EC2 (Elastic Compute Cloud), permitindo a criação,
+            configuração, monitoramento e gerenciamento de servidores virtuais
+            na nuvem.
+        </p>
+    </div>
+</section>
 
-- Criar e configurar instâncias EC2
-- Gerenciar grupos de segurança (Security Groups)
-- Configurar acesso remoto via SSH
-- Monitorar recursos utilizando CloudWatch
-- Aplicar boas práticas de segurança na AWS
-- Documentar todo o processo utilizando GitHub
+<section>
+    <h2>🎯 Objetivos</h2>
 
----
+    <div class="grid">
 
-## 🏗️ Arquitetura do Projeto
+        <div class="card">
+            Criar e configurar instâncias EC2
+        </div>
 
-```text
+        <div class="card">
+            Configurar Security Groups
+        </div>
+
+        <div class="card">
+            Acesso remoto via SSH
+        </div>
+
+        <div class="card">
+            Monitoramento com CloudWatch
+        </div>
+
+        <div class="card">
+            Aplicar boas práticas de segurança
+        </div>
+
+        <div class="card">
+            Documentação utilizando GitHub
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>🏗️ Arquitetura</h2>
+
+    <div class="architecture">
+<pre>
 ┌──────────────┐
 │   Usuário    │
 └──────┬───────┘
@@ -42,9 +87,7 @@ Durante a prática foram abordados conceitos essenciais relacionados à infraest
        ▼
 ┌─────────────────────┐
 │ Security Group      │
-│ Porta 22 (SSH)      │
-│ Porta 80 (HTTP)     │
-│ Porta 443 (HTTPS)   │
+│ SSH | HTTP | HTTPS  │
 └──────┬──────────────┘
        │
        ▼
@@ -57,200 +100,136 @@ Durante a prática foram abordados conceitos essenciais relacionados à infraest
 ┌─────────────────────┐
 │ Amazon CloudWatch   │
 └─────────────────────┘
-```
----
+</pre>
+    </div>
+</section>
 
-## ☁️ O que é Amazon EC2?
+<section>
+    <h2>🔧 Configurações da Instância</h2>
 
-O Amazon EC2 é um serviço da AWS que permite criar e gerenciar servidores virtuais sob demanda.
+    <table>
 
-### Benefícios
+        <tr>
+            <th>Configuração</th>
+            <th>Valor</th>
+        </tr>
 
-- Escalabilidade
-- Alta disponibilidade
-- Flexibilidade
-- Baixo custo inicial
-- Integração com diversos serviços AWS
+        <tr>
+            <td>Sistema Operacional</td>
+            <td>Ubuntu Server</td>
+        </tr>
 
----
+        <tr>
+            <td>Tipo da Instância</td>
+            <td>t2.micro</td>
+        </tr>
 
-## 🔧 Etapa 1 - Criação da Instância
+        <tr>
+            <td>Região</td>
+            <td>us-east-1</td>
+        </tr>
 
-### Configurações Utilizadas
+        <tr>
+            <td>Armazenamento</td>
+            <td>8 GB SSD</td>
+        </tr>
 
-| Configuração | Valor |
-|-------------|--------|
-| Sistema Operacional | Ubuntu Server |
-| Tipo da Instância | t2.micro |
-| Região | us-east-1 |
-| Armazenamento | 8 GB SSD |
-| Chave SSH | RSA |
+        <tr>
+            <td>Chave SSH</td>
+            <td>RSA</td>
+        </tr>
 
-### Processo
+    </table>
 
-1. Acesso ao Console AWS
-2. Seleção do serviço EC2
-3. Criação da instância
-4. Configuração do Security Group
-5. Geração da chave SSH
-6. Inicialização da instância
+</section>
 
----
+<section>
+    <h2>🔒 Segurança</h2>
 
-## 🔒 Etapa 2 - Configuração de Segurança
+    <table>
 
-### Security Group
+        <tr>
+            <th>Porta</th>
+            <th>Protocolo</th>
+            <th>Função</th>
+        </tr>
 
-| Porta | Protocolo | Função |
-|---------|---------|---------|
-| 22 | TCP | SSH |
-| 80 | TCP | HTTP |
-| 443 | TCP | HTTPS |
+        <tr>
+            <td>22</td>
+            <td>TCP</td>
+            <td>SSH</td>
+        </tr>
 
-### Boas Práticas
+        <tr>
+            <td>80</td>
+            <td>TCP</td>
+            <td>HTTP</td>
+        </tr>
 
-- Restringir acesso SSH por IP
-- Utilizar autenticação por chave
-- Evitar portas desnecessárias abertas
-- Aplicar princípio do menor privilégio
+        <tr>
+            <td>443</td>
+            <td>TCP</td>
+            <td>HTTPS</td>
+        </tr>
 
----
+    </table>
 
-## 💻 Etapa 3 - Conexão SSH
+</section>
 
-Comando utilizado:
+<section>
+    <h2>💻 Conexão SSH</h2>
 
-```bash
+    <div class="code">
+<pre>
 ssh -i chave.pem ubuntu@IP_PUBLICO
+</pre>
+    </div>
+
+</section>
+
+<section>
+    <h2>📊 Monitoramento CloudWatch</h2>
+
+    <div class="card">
+        <ul>
+            <li>Uso de CPU</li>
+            <li>Tráfego de Rede</li>
+            <li>Disco</li>
+            <li>Status da Instância</li>
+            <li>Alarmes e Eventos</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>📈 Insights Obtidos</h2>
+
+    <div class="card">
+        <p>
+            O laboratório demonstrou como a computação em nuvem permite
+            provisionar infraestrutura rapidamente, garantindo escalabilidade,
+            disponibilidade e segurança.
+        </p>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+
+    <h3>👨‍💻 Gabriel Monteiro</h3>
+
+    <p>
+        Estudante de Engenharia | Dados | IA | Cloud Computing
+    </p>
+
+    <p>
+        Projeto desenvolvido para fins educacionais.
+    </p>
+
+</footer>
+
+</body>
+</html>
 ```
-
-Resultado esperado:
-
-```bash
-Welcome to Ubuntu
-```
-
----
-
-## 📊 Etapa 4 - Monitoramento
-
-Utilizando Amazon CloudWatch foi possível monitorar:
-
-- Uso de CPU
-- Tráfego de rede
-- Disco
-- Status da instância
-- Alarmes e eventos
-
----
-
-## 🧠 Conceitos Aprendidos
-
-### EC2
-
-Serviço de computação em nuvem da AWS.
-
-### AMI (Amazon Machine Image)
-
-Modelo utilizado para criação de instâncias.
-
-### Security Group
-
-Firewall virtual responsável pelo controle de acesso.
-
-### Key Pair
-
-Par de chaves para autenticação SSH.
-
-### Elastic IP
-
-Endereço IP público fixo.
-
-### CloudWatch
-
-Ferramenta de monitoramento da AWS.
-
----
-
-## 🚧 Desafios Encontrados
-
-### Problema
-
-Não foi possível conectar via SSH.
-
-### Solução
-
-- Verificação da chave privada
-- Ajuste das permissões do arquivo .pem
-- Validação das regras do Security Group
-
----
-
-## 📈 Insights Obtidos
-
-Durante o laboratório foi possível perceber como a computação em nuvem simplifica o provisionamento de infraestrutura, permitindo criar servidores em minutos sem a necessidade de investimento em hardware físico.
-
-Além disso, ficou evidente a importância da segurança na configuração de grupos de acesso e do monitoramento contínuo dos recursos computacionais.
-
----
-
-## 🖼️ Evidências
-
-### Banner do Projeto
-
-```markdown
-![Banner](images/aws-ec2-banner.png)
-```
-
-### Diagrama da Arquitetura
-
-```markdown
-![Arquitetura](Diagrama de EC2 .drawio)
-```
-
----
-
-## 📚 Recursos Utilizados
-
-### AWS
-
-- Amazon EC2
-- Amazon CloudWatch
-- IAM
-- Security Groups
-
-### Ferramentas
-
-- GitHub
-- Git
-- Draw.io
-- Visual Studio Code
-
----
-
-## 🔗 Referências
-
-- https://docs.aws.amazon.com/ec2/
-- https://docs.aws.amazon.com/cloudwatch/
-- https://docs.github.com/
-- https://aws.amazon.com/training/
-
----
-
-## 👨‍💻 Autor
-
-**Gabriel Monteiro**
-
-Estudante de Engenharia | Dados | Inteligência Artificial | Cloud Computing
-
-### Conecte-se comigo
-
-- GitHub: https://github.com/Monteiro-01
-- LinkedIn: https://linkedin.com/in/
----
-
-## ⭐ Conclusão
-
-Ao concluir este laboratório, foi possível compreender o ciclo completo de gerenciamento de instâncias EC2, desde o provisionamento até o monitoramento, aplicando conceitos fundamentais de infraestrutura em nuvem e boas práticas de segurança.
-
-Este projeto servirá como material de apoio para futuras implementações e estudos relacionados à computação em nuvem, DevOps e arquitetura AWS.
