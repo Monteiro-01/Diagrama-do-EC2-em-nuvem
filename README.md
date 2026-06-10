@@ -196,17 +196,15 @@ Além disso, ficou evidente a importância da segurança na configuração de gr
 
 ## 🖼️ Evidências
 
-### Banner do Projeto
-
-```markdown
-![Banner](images/aws-ec2-banner.png)
-```
-
 ### Diagrama da Arquitetura
 
-```markdown
-![Arquitetura](Diagrama de EC2.png)
-```
+<div align="center">
+
+## 🏗️ Diagrama da Arquitetura
+
+<img src="images/diagrama-ec2.png" width="800"/>
+
+</div>
 
 ---
 
