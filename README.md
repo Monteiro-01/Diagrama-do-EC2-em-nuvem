@@ -1,86 +1,235 @@
-<hr>
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 Lab - Gerenciamento de Instâncias</title>
 
-<h1 align="center">🏗️ Arquitetura da Solução</h1>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<p align="center">
-  O diagrama abaixo representa a comunicação entre a infraestrutura local da empresa e os serviços hospedados na AWS.
-</p>
+<body>
 
-<div align="center">
+<header>
+    <h1>🚀 AWS EC2 Lab</h1>
+    <p>Gerenciamento de Instâncias na AWS</p>
 
-<img
-    src="Diagrama de EC2.png"
-    alt="Diagrama de Arquitetura AWS EC2"
-    width="900"
-/>
+    <div class="badges">
+        <span class="badge">AWS EC2</span>
+        <span class="badge">Cloud Computing</span>
+        <span class="badge">GitHub Documentation</span>
+        <span class="badge">Concluído</span>
+    </div>
+</header>
+
+<div class="container">
+
+<section>
+    <h2>📌 Sobre o Projeto</h2>
+
+    <div class="card">
+        <p>
+            Este laboratório teve como objetivo explorar os principais recursos do
+            Amazon EC2 (Elastic Compute Cloud), permitindo a criação,
+            configuração, monitoramento e gerenciamento de servidores virtuais
+            na nuvem.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>🎯 Objetivos</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            Criar e configurar instâncias EC2
+        </div>
+
+        <div class="card">
+            Configurar Security Groups
+        </div>
+
+        <div class="card">
+            Acesso remoto via SSH
+        </div>
+
+        <div class="card">
+            Monitoramento com CloudWatch
+        </div>
+
+        <div class="card">
+            Aplicar boas práticas de segurança
+        </div>
+
+        <div class="card">
+            Documentação utilizando GitHub
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>🏗️ Arquitetura</h2>
+
+    <div class="architecture">
+<pre>
+┌──────────────┐
+│   Usuário    │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│ Internet     │
+└──────┬───────┘
+       │
+       ▼
+┌─────────────────────┐
+│ Security Group      │
+│ SSH | HTTP | HTTPS  │
+└──────┬──────────────┘
+       │
+       ▼
+┌─────────────────────┐
+│ Amazon EC2          │
+│ Ubuntu Server       │
+└──────┬──────────────┘
+       │
+       ▼
+┌─────────────────────┐
+│ Amazon CloudWatch   │
+└─────────────────────┘
+</pre>
+    </div>
+</section>
+
+<section>
+    <h2>🔧 Configurações da Instância</h2>
+
+    <table>
+
+        <tr>
+            <th>Configuração</th>
+            <th>Valor</th>
+        </tr>
+
+        <tr>
+            <td>Sistema Operacional</td>
+            <td>Ubuntu Server</td>
+        </tr>
+
+        <tr>
+            <td>Tipo da Instância</td>
+            <td>t2.micro</td>
+        </tr>
+
+        <tr>
+            <td>Região</td>
+            <td>us-east-1</td>
+        </tr>
+
+        <tr>
+            <td>Armazenamento</td>
+            <td>8 GB SSD</td>
+        </tr>
+
+        <tr>
+            <td>Chave SSH</td>
+            <td>RSA</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section>
+    <h2>🔒 Segurança</h2>
+
+    <table>
+
+        <tr>
+            <th>Porta</th>
+            <th>Protocolo</th>
+            <th>Função</th>
+        </tr>
+
+        <tr>
+            <td>22</td>
+            <td>TCP</td>
+            <td>SSH</td>
+        </tr>
+
+        <tr>
+            <td>80</td>
+            <td>TCP</td>
+            <td>HTTP</td>
+        </tr>
+
+        <tr>
+            <td>443</td>
+            <td>TCP</td>
+            <td>HTTPS</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section>
+    <h2>💻 Conexão SSH</h2>
+
+    <div class="code">
+<pre>
+ssh -i chave.pem ubuntu@IP_PUBLICO
+</pre>
+    </div>
+
+</section>
+
+<section>
+    <h2>📊 Monitoramento CloudWatch</h2>
+
+    <div class="card">
+        <ul>
+            <li>Uso de CPU</li>
+            <li>Tráfego de Rede</li>
+            <li>Disco</li>
+            <li>Status da Instância</li>
+            <li>Alarmes e Eventos</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>📈 Insights Obtidos</h2>
+
+    <div class="card">
+        <p>
+            O laboratório demonstrou como a computação em nuvem permite
+            provisionar infraestrutura rapidamente, garantindo escalabilidade,
+            disponibilidade e segurança.
+        </p>
+    </div>
+
+</section>
 
 </div>
 
-<br>
+<footer>
 
-<h2>📋 Componentes da Arquitetura</h2>
+    <h3>👨‍💻 Gabriel Monteiro</h3>
 
-<h3>👤 Usuário (Ator)</h3>
+    <p>
+        Estudante de Engenharia | Dados | IA | Cloud Computing
+    </p>
 
-<p>
-Responsável por interagir com o sistema corporativo e realizar o envio de arquivos para processamento.
-</p>
+    <p>
+        Projeto desenvolvido para fins educacionais.
+    </p>
 
-<h3>💻 Sistema Corporativo</h3>
+</footer>
 
-<p>
-Aplicação hospedada na infraestrutura da empresa responsável pela comunicação com os serviços AWS.
-</p>
-
-<h3>☁️ AWS Cloud</h3>
-
-<p>
-Ambiente responsável pelo processamento, armazenamento e gerenciamento dos recursos utilizados pela aplicação.
-</p>
-
-<h3>🖥️ Amazon EC2</h3>
-
-<p>
-Instância utilizada para processamento das informações e execução da aplicação.
-</p>
-
-<h3>💾 Amazon EBS</h3>
-
-<ul>
-<li>EBS D - Volume de armazenamento auxiliar</li>
-<li>EBS E - Volume de armazenamento persistente</li>
-</ul>
-
-<h3>🗄️ Amazon RDS</h3>
-
-<p>
-Serviço de banco de dados gerenciado responsável pelo armazenamento das informações da aplicação.
-</p>
-
-<hr>
-
-<h2>🔄 Fluxo de Funcionamento</h2>
-
-<ol>
-<li>O usuário interage com o sistema corporativo.</li>
-<li>O sistema envia arquivos para processamento.</li>
-<li>A instância EC2 recebe e processa os dados.</li>
-<li>Os arquivos são armazenados nos volumes EBS.</li>
-<li>As informações são persistidas no Amazon RDS.</li>
-<li>Os resultados retornam ao sistema corporativo.</li>
-</ol>
-
-<hr>
-
-<h2>✅ Benefícios da Arquitetura</h2>
-
-<ul>
-<li>Escalabilidade</li>
-<li>Alta disponibilidade</li>
-<li>Armazenamento persistente</li>
-<li>Segurança dos dados</li>
-<li>Facilidade de manutenção</li>
-<li>Integração com serviços AWS</li>
-</ul>
-
-<hr>
+</body>
+</html>
+```
