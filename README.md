@@ -26,7 +26,9 @@ Este laboratório teve como objetivo explorar os principais recursos do **Amazon
 
 ---
 ## 🖼️ Diagrama da Arquitetura
-![Arquitetura AWS EC2](imagem/Diagrama de EC2.png)
+<p align="center">
+  <img src="imagem/Diagrama de EC2.png" width="800">
+</p>
 
 ## 🏗️ Arquitetura
 
