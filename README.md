@@ -217,9 +217,8 @@ aws-ec2-lab/
 
 ### Conecte-se comigo
 
-* LinkedIn: https://www.linkedin.com/in/gabriel-monteiro01?utm_source=share_via&utm_content=profile&utm_medium=member_android
-* 
-
+<p align="center"> <a href="https://www.linkedin.com/in/gabriel-monteiro01?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-Perfil%20Profissional-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> </p>
+  
 ---
 
 ## ⭐ Conclusão
