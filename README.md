@@ -217,8 +217,8 @@ aws-ec2-lab/
 
 ### Conecte-se comigo
 
-* GitHub: https://github.com/seu-usuario
-* LinkedIn: https://linkedin.com/in/seu-perfil
+* LinkedIn: https://www.linkedin.com/in/gabriel-monteiro01?utm_source=share_via&utm_content=profile&utm_medium=member_android
+* 
 
 ---
 
